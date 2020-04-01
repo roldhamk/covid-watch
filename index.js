@@ -53,6 +53,14 @@ app.post("/", (req, res) => {
   let medicinebool = medicine == "on" ? true:false;
   let chatbool = chat == "on" ? true:false;
 
+  let title = req.body.title;
+  let category = req.body.category;
+  let job_description = req.body.job_description;
+  let location = req.body.location;
+  let mark_as_done = req.body.mark_as_done;
+
+  let donebool = mark_as_done == "on" ? true:false;
+
 
   const user = new userSchema({
     name: name,
@@ -65,7 +73,16 @@ app.post("/", (req, res) => {
     chat: chatbool
   });
 
+  const job = new jobSchema({
+    title : title,
+    category: category,
+    job_description : job_description,
+    location: location,
+    mark_as_done: donebool
+  })
+
   user.save();
+  job.save();
   res.render("index");
 });
 
