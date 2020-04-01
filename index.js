@@ -10,7 +10,7 @@ const mongoose = require("mongoose");
 const userSchema = require("./models/user");
 
 mongoose.connect(
-  `mongodb+srv://rachael:${process.env.PASS}@covid-watch-1hmlt.mongodb.net/test?retryWrites=true&w=majority`,
+  `mongodb+srv://katie:Password123abc@covid-watch-1hmlt.mongodb.net/test?retryWrites=true&w=majority`,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -41,11 +41,28 @@ app.post("/", (req, res) => {
   let name = req.body.name;
   let email = req.body.email;
   let password = req.body.password;
+  let volunteer = req.body.volunteer
+  let notvolunteer = req.body.notvolunteer
+  let shopping = req.body.shopping
+  let medicine = req.body.medicine
+  let chat = req.body.chat
+
+  let volunteerbool = volunteer == "on" ? true:false;
+  let notvolunteerbool = notvolunteer == "on" ? true:false;
+  let shoppingbool = shopping == "on" ? true:false;
+  let medicinebool = medicine == "on" ? true:false;
+  let chatbool = chat == "on" ? true:false;
+
 
   const user = new userSchema({
     name: name,
     email: email,
-    password: password
+    password: password,
+    volunteer: volunteerbool,
+    notvolunteer: notvolunteerbool,
+    shopping: shoppingbool,
+    medicine: medicinebool,
+    chat: chatbool
   });
 
   user.save();
