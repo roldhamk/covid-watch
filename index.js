@@ -79,6 +79,8 @@ app.post("/", (req, res) => {
     job_description : job_description,
     location: location,
     mark_as_done: donebool
+
+    
   })
 
   user.save();
