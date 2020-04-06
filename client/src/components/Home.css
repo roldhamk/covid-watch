@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: #262525;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-wrap {
+  border: 2px firebrick solid;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+h1 {
+  padding: 10px;
+  text-align: center;
+}
+
+.page-text {
+  padding: 5px;
+}
