@@ -41,6 +41,10 @@ app.post("/", (req, res) => {
   let name = req.body.name;
   let email = req.body.email;
   let password = req.body.password;
+  let addressl1 = req.body.addressl1
+  let addressl2 = req.body.addressl2
+  let city = req.body.city
+  let postcode = req.body.postcode
   let volunteer = req.body.volunteer
   let notvolunteer = req.body.notvolunteer
   let shopping = req.body.shopping
@@ -70,7 +74,11 @@ app.post("/", (req, res) => {
     notvolunteer: notvolunteerbool,
     shopping: shoppingbool,
     medicine: medicinebool,
-    chat: chatbool
+    chat: chatbool,
+    addressl1: addressl1,
+    addressl2: addressl2,
+    city: city,
+    postcode: postcode
   });
 
   const job = new jobSchema({

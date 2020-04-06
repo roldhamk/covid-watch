@@ -40,6 +40,22 @@ const userSchema = new mongoose.Schema({
     type: Boolean,
     required: false,
     isChecked: true
+  },
+  addressl1: {
+    type: String,
+    required: true,
+  },
+  addressl2: {
+    type: String,
+    required: false,
+  },
+  city: {
+    type: String,
+    required: true,
+  },
+  postcode: {
+    type: String,
+    required: true,
   }
 });
 
