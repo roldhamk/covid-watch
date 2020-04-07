@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import "./Postings.css"
 
 export default class Postings extends Component {
   state = {
@@ -54,13 +55,13 @@ export default class Postings extends Component {
         <label>
           Title:
           <br></br>
-          <input type="text" name="title" value={this.state.title} onChange={this.handleInputChange}placeholder="Give a brief idea of wat you need" />
+          <input className="title" type="text" name="title" value={this.state.title} onChange={this.handleInputChange}placeholder="Give a brief idea of wat you need" />
         </label>
         <br></br>
         <label>
           Description:
           <br></br>
-          <input type="text" name="description" value={this.state.description} onChange={this.handleInputChange} placeholder="Make sure you include all the information, someone needs to deal with your request. For example if you need something picking up from somewhere specific include the location, or if you have any food allergies" />
+          <input className="description" type="text" name="description" value={this.state.description} onChange={this.handleInputChange} placeholder="Make sure you include all the information, someone needs to deal with your request. For example if you need something picking up from somewhere specific include the location, or if you have any food allergies" />
         </label>
         <br></br>
         <label>
@@ -93,10 +94,10 @@ export default class Postings extends Component {
         <label>
           Postcode:
           <br></br>
-          <input type="text" name="postcode" value={this.state.postcode} onChange={this.handleInputChange} placeholder="Postcode"/>
+          <input className="postcode" type="text" name="postcode" value={this.state.postcode} onChange={this.handleInputChange} placeholder="Postcode"/>
         </label>
         <br></br>
-        <button type="submit" name="send">SEND</button>
+        <button className="postingsButton" type="submit" name="send">SEND</button>
 
         
       </form>
