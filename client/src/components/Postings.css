@@ -18,7 +18,7 @@
     }
     .description {
         width: 100%;
-        height: 15vh;
+        height: 29vh;
         border-top: none;
         border-left: none;
         border-right: none;
@@ -53,22 +53,23 @@
     .cat1 {
         display: flex;
         margin-bottom: 0vh;
+        font-size: 3.5vh;
     }
     .radioRing1 {
         margin-left: 4vh;
     }
     .radioRing2 {
-        margin-left: 4.4vh;
+        margin-left: 4.7vh;
     }
     .radioRing3 {
-        margin-left: 7.5vh;
+        margin-left: 9.8vh;
     }
     .radioRing4 {
-        margin-left: 2.9vh;
+        margin-left: 2.3vh;
     }
     input[type='radio'] {
-        height: 3vh;
-        width: 6vw;
+        height: 6vh;
+        width: 8vw;
         vertical-align: middle;
     }
 
@@ -76,7 +77,11 @@
         font-size: 3vh;
         font-weight: bold;
         margin-bottom: -1vh;
+        margin-top: 1vh;
     }
 
+    textarea[type='text'] {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 }
 

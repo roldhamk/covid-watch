@@ -75,7 +75,7 @@ export default class Postings extends Component {
       <h1>Post your Request:</h1>
       <h2>Please include as much information as you can</h2>
      
-      <form onSubmit={this.createPostings} >
+      <form id="formForm" onSubmit={this.createPostings} >
         <label>
           <div className="titleDiv">
           Title:
@@ -89,7 +89,7 @@ export default class Postings extends Component {
           Description:
           </div>
           <br></br>
-          <input className="description" type="text" name="description" value={this.state.description} onChange={this.handleInputChange} placeholder="Make sure you include all the information, someone needs to deal with your request. For example if you need something picking up from somewhere specific include the location, or if you have any food allergies" />
+          <textarea  form="formForm" className="description" type="text" name="description" value={this.state.description} onChange={this.handleInputChange} placeholder="Make sure you include all the information, someone needs to deal with your request. For example if you need something picking up from somewhere specific include the location, or if you have any food allergies" />
         </label>
         <br></br>
         <div className="radioButtons">
