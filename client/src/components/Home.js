@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom'
 import cvlogo from "./images/Logo.png";
 import "./Home.css";
 
@@ -41,7 +42,11 @@ export class Home extends Component {
             </p>
           </div>
           <div className="buttons">
-            <button>Sign up to volunteer</button>
+          <Link to="/Signup">
+              <button type="button">
+                    Sign up as a volunteer
+              </button>
+          </Link>
             <button>Sign up to request assistance</button>
           </div>
           <div className="existingacc">
