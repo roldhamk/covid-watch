@@ -39,6 +39,7 @@ export default class Postings extends Component {
     else if (this.state.postcode === "") {
       alert("Please enter a postcode")
     } else {
+      alert("Thank you for your POST")
       this.setState({
         title: "",
         description: "",
@@ -141,7 +142,7 @@ export default class Postings extends Component {
           <input className="postcode" type="text" name="postcode" value={this.state.postcode} onChange={this.handleInputChange} placeholder="Postcode"/>
         </label>
         <br></br>
-        <button className="postingsButton" type="submit" name="send" onClick={this.sendButton}>SEND</button>
+        <button className="postingsButton" type="submit" name="send" onClick={this.sendButton}>POST</button>
 
         
       </form>
