@@ -1,8 +1,83 @@
 
-/* @media only screen and (max-width: 450px) {
+@media only screen and (max-width: 450px) {
 
-} */
+    * {
+        margin-left: 0.5vh;
+    }
+    .wholePostingsBody h2 {
+        color: gray;
+        font-size: 3vh;
+    }
+    .title {
+        width: 90vw;
+        height: 7vh;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-color: gray;
+        font-size: 3vh;
+       
+    }
+    .description {
+        width: 90vw;
+        height: 15vh;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-color: gray;
+        font-size: 3vh;
+       
+    }
+    .postcode {
+        width: 90vw;
+        height: 7vh;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-color: gray;
+        font-size: 3vh;
+    }
 
-.wholePostingsBody  {
-    background-color: red;
+    .postingsButton {
+        background-color: #32BD6D;
+        width: 90vw;
+        height: 9vh;
+        margin-top: 1vh;
+        margin-bottom: 3vh;
+        font-size: 4vh;
+        color: white;
+    }
+    .radioButtons {
+      font-size: 3.5vh;
+
+    }
+    .cat1 {
+        display: flex;
+        margin-bottom: 0vh;
+    }
+    .radioRing1 {
+        margin-left: 4vh;
+    }
+    .radioRing2 {
+        margin-left: 4.8vh;
+    }
+    .radioRing3 {
+        margin-left: 9.9vh;
+    }
+    .radioRing4 {
+        margin-left: 2.36vh;
+    }
+    input[type='radio'] {
+        height: 3vh;
+        width: 6vw;
+        vertical-align: middle;
+    }
+
+    .categoryDiv, .titleDiv, .descriptionDiv, .postcodeDiv {
+        font-size: 3vh;
+        font-weight: bold;
+        margin-bottom: -1vh;
+    }
+
 }
+
