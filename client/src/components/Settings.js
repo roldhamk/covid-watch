@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-
 import './Signup.css';
 import cvlogo from "./images/Logo.png";
 
@@ -8,12 +7,9 @@ import cvlogo from "./images/Logo.png";
 class Signup extends React.Component {
   state = {
     name: '',
-    username: '',
     email: '',
     password: '',
     checkpassword: '',
-    volunteer: false,
-    notvolunteer: false,
     address1: '',
     address2: '',
     city: '',
@@ -24,7 +20,7 @@ class Signup extends React.Component {
 
     console.log(this.state)
 
-    let response = await fetch("http://localhost:3000/Signup", {
+    let response = await fetch("http://localhost:3000/Settings", {
       method: "post",
       body: JSON.stringify(this.state),
       headers: {"Content-Type": "application/json"}
@@ -36,14 +32,6 @@ class Signup extends React.Component {
   handleInputChange = (event) => {
     this.setState({[event.target.name]: event.target.value});
   }
-
-  handleVolunteerTickboxClick = () => {
-    this.setState({volunteer: !this.state.volunteer});
-  }
-  handleNotVolunteerlTickboxClick = () => {
-    this.setState({notvolunteer: !this.state.notvolunteer});
-  }
-
 
   handleCheckPassword = () => {
     const { password, checkpassword } = this.state;
@@ -58,15 +46,11 @@ class Signup extends React.Component {
         <div className= "header">
         <img src={cvlogo} alt="covid-watch logo" />
         </div>
+        <h2>Settings</h2>
         <form onSubmit={this.createUser}>
           <label>
           Name:<br/>
             <input type="text" name="name" value={this.state.name} onChange={this.handleInputChange}></input>
-          </label><br/>
-
-          <label>
-          Username:
-            <input type="text" name="username" value={this.state.username} onChange={this.handleInputChange}></input>
           </label><br/>
 
           <label>
@@ -84,18 +68,6 @@ class Signup extends React.Component {
             <input type="password" name="checkpassword" value={this.state.checkpassword} onChange={this.handleInputChange}></input>
           </label><br/>
           <br/>
-          <p>Would you like to sign up as a volunteer or are you looking for help?</p>
-          <div className="tickboxes">
-          <label>
-            Volunteer:
-            <input type="checkbox" name="volunteer" value={this.state.volunteer} onChange={this.handleVolunteerTickboxClick}></input>
-          </label><br/>
-
-          <label>
-            Need Help:
-            <input type="checkbox" name="notvolunteer" value={this.state.notvolunteer} onChange={this.handleNotVolunteerlTickboxClick}></input>
-          </label><br/>
-          </div><br/>
 
           <label>
             Address Line 1:

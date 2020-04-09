@@ -24,7 +24,7 @@ export default class Postings extends Component {
   handleFormSubmit = formSubmitEvent => {
     formSubmitEvent.preventDefault();
 
-    console.log("You have submitted:", this.state.selectedOption);
+    console.log("You have submitted:", this.state);
   };
 
   // use it when server side has been updated
@@ -54,7 +54,7 @@ export default class Postings extends Component {
         <label>
           Title:
           <br></br>
-          <input type="text" name="title" value={this.state.title} onChange={this.handleInputChange}placeholder="Give a brief idea of wat you need" />
+          <input type="text" name="title" value={this.state.title} onChange={this.handleInputChange}placeholder="Give a brief idea of what you need" />
         </label>
         <br></br>
         <label>

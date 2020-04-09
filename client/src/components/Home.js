@@ -47,14 +47,18 @@ export class Home extends Component {
                     Sign up as a volunteer
               </button>
           </Link>
-            <button>Sign up to request assistance</button>
-          </div>
+          <Link to="/Signup">
+              <button type="button">
+                    Look for Helpers
+              </button>
+          </Link>
           <div className="existingacc">
             <h3>Already a member?</h3>
             <p>login form here...</p>
             <button>Log In</button>
           </div>
         </div>
+      </div>
       </div>
     );
   }
