@@ -3,6 +3,11 @@
   padding: 0;
 }
 
+#root{
+  margin: 0;
+  padding: 0;
+}
+
 .header {
   background-color: #262525;
   width: 100vw;
@@ -23,4 +28,11 @@ h1 {
 
 .page-text {
   padding: 5px;
+}
+
+button{
+  background-color: #32bd6d;
+  color: white;
+  border: none;
+  padding: 15px;
 }
