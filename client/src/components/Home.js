@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom'
 import cvlogo from "./images/Logo.png";
+import Form from './Form'
 import "./Home.css";
 
 export class Home extends Component {
@@ -43,16 +44,19 @@ export class Home extends Component {
           </div>
           <div className="buttons">
           <Link to="/Signup">
-              <button type="button">
+              <button type="button" className = "volBtn">
                     Sign up as a volunteer
               </button>
           </Link>
-            <button>Sign up to request assistance</button>
+          <Link to="/Signup">
+              <button type="button" className = "helpBtn">
+                    Look for Helpers
+              </button>
+          </Link>
           </div>
           <div className="existingacc">
             <h3>Already a member?</h3>
-            <p>login form here...</p>
-            <button>Log In</button>
+            <Form />
           </div>
         </div>
       </div>

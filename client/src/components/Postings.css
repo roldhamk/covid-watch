@@ -1,4 +1,3 @@
-
 @media only screen and (max-width: 450px) {
 
    
@@ -80,8 +79,11 @@
         margin-top: 1vh;
     }
 
+
     textarea[type='text'] {
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
+}
+
 }
 
