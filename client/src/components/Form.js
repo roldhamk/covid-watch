@@ -5,7 +5,6 @@ import './Home.css';
 
 class Form extends React.Component {
   state = {
-    username: '',
     email: '',
     password: '',
   }
@@ -33,8 +32,8 @@ class Form extends React.Component {
       <>
         <form onSubmit={this.checkUser}>
           <label>
-          Username or Email:
-            <input type="text" name="username" value={this.state.username} onChange={this.handleInputChange}></input>
+          Email:
+            <input type="text" name="email" value={this.state.email} onChange={this.handleInputChange}></input>
           </label><br/>
 
           <label>

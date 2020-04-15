@@ -19,7 +19,7 @@ handleInputChange = (event) => {
 }
 
 getData = () => {
-    fetch(`http://localhost:3000/Postings`)
+    fetch(`http://localhost:3000/Listings`)
     .then(response => response.json())
     .then(responseData => {
         // console.log(responseData)

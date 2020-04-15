@@ -10,9 +10,10 @@ export default class Postings extends Component {
     postcode: ""
   }
 
-  createPostings = async(event) => {
+  Postings = async(event) => {
     event.preventDefault();
-    let response = await fetch('http://localhost:3000/Postings', {
+    console.log(this.state)
+    let response = await fetch('http://localhost:3001/Postings', {
       method: 'post',
       body: JSON.stringify(this.state),
       headers: {"Content-Type": "application/json"}
@@ -47,11 +48,11 @@ export default class Postings extends Component {
       alert("Please enter a postcode")
     } else {
       alert("Thank you for your POST")
-      this.setState({
-        title: "",
-        description: "",
-        postcode: ""
-      })
+      // this.setState({
+      //   title: "",
+      //   description: "",
+      //   postcode: ""
+      // })
     }
   }
 
@@ -75,13 +76,13 @@ export default class Postings extends Component {
       <h1>Post your Request:</h1>
       <h2>Please include as much information as you can</h2>
      
-      <form id="formForm" onSubmit={this.createPostings} >
+      <form id="formForm" onSubmit={this.Postings} >
         <label>
           <div className="titleDiv">
           Title:
           </div>
           <br></br>
-          <input className="title" type="text" name="title" value={this.state.title} onChange={this.handleInputChange}placeholder="Give a brief idea of wath you need" />
+          <input className="title" type="text" name="title" value={this.state.title} onChange={this.handleInputChange} placeholder="Give a brief idea of wath you need" />
         </label>
         <br></br>
         <label>

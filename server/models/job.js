@@ -1,27 +1,23 @@
 const mongoose = require('mongoose');
 
-const jobSchema = new mongoose.Schema({
+const JobSchema = new mongoose.Schema({
     title: {
         type: String,
         required: true
     },
-    category: {
+    selectedOption: {
         type: String,
         required: true
     },
-    job_description: {
+    description: {
         type: String,
         required: true
     },
-    location: {
+    postcode: {
         type: String,
         required: true
     },
-    mark_as_done: {
-        type: Boolean,
-        required: false,
-        isChecked: true
-    }
+   
 });
 
-module.exports = mongoose.model("jobs", jobSchema);
+module.exports = mongoose.model("jobs", JobSchema);

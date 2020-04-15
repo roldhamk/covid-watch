@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 import './Signup.css';
 import cvlogo from "./images/Logo.png";
@@ -8,23 +8,22 @@ import cvlogo from "./images/Logo.png";
 class Signup extends React.Component {
   state = {
     name: '',
-    username: '',
     email: '',
     password: '',
     checkpassword: '',
     volunteer: false,
     notvolunteer: false,
-    address1: '',
-    address2: '',
+    addressl1: '',
+    addressl2: '',
     city: '',
     postcode: ''
   }
-  createUser = async (event) => {
+  Signup = async (event) => {    
     event.preventDefault()
 
     console.log(this.state)
 
-    let response = await fetch("http://localhost:3000/Signup", {
+    let response = await fetch("http://localhost:3001/Signup", {
       method: "post",
       body: JSON.stringify(this.state),
       headers: {"Content-Type": "application/json"}
@@ -50,6 +49,9 @@ class Signup extends React.Component {
     if (password !== checkpassword) {
         alert("Passwords don't match");
     }
+    else {
+      alert('User created')
+    }
   }
 
   render() {
@@ -58,15 +60,10 @@ class Signup extends React.Component {
         <div className= "header">
         <img src={cvlogo} alt="covid-watch logo" />
         </div>
-        <form onSubmit={this.createUser}>
+        <form onSubmit={this.Signup}>
           <label>
           Name:<br/>
             <input type="text" name="name" value={this.state.name} onChange={this.handleInputChange}></input>
-          </label><br/>
-
-          <label>
-          Username:
-            <input type="text" name="username" value={this.state.username} onChange={this.handleInputChange}></input>
           </label><br/>
 
           <label>
@@ -99,12 +96,12 @@ class Signup extends React.Component {
 
           <label>
             Address Line 1:
-            <input type="text" name="address1" value={this.state.address1} onChange={this.handleInputChange}></input>
+            <input type="text" name="addressl1" value={this.state.addressl1} onChange={this.handleInputChange}></input>
           </label><br/>
 
           <label>
             Address Line 2:
-            <input type="text" name="address2" value={this.state.address2} onChange={this.handleInputChange}></input>
+            <input type="text" name="addressl2" value={this.state.addressl2} onChange={this.handleInputChange}></input>
           </label><br/>
 
           <label>
@@ -117,9 +114,8 @@ class Signup extends React.Component {
             <input type="text" name="postcode" value={this.state.postcode} onChange={this.handleInputChange}></input>
           </label><br/>
 
-          <Link to="/Postings">
-              <input type="submit" value= "Sign Up" className="submit" onClick={this.handleCheckPassword}></input>
-          </Link>
+          <input type="submit" value= "Sign Up" className="submit" onClick={this.handleCheckPassword}></input>
+          
 
         </form>
       </>
