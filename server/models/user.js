@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const userSchema = new mongoose.Schema({
+const UserSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
@@ -26,21 +26,7 @@ const userSchema = new mongoose.Schema({
     required: false,
     isChecked: true
   },
-  shopping: {
-    type: Boolean,
-    required: false,
-    isChecked: true
-  },
-  medicine: {
-    type: Boolean,
-    required: false,
-    isChecked: true
-  },
-  chat: {
-    type: Boolean,
-    required: false,
-    isChecked: true
-  },
+  
   addressl1: {
     type: String,
     required: true,
@@ -59,4 +45,10 @@ const userSchema = new mongoose.Schema({
   }
 });
 
-module.exports = mongoose.model("users", userSchema);
+UserSchema.statics.findUser = async function(email){
+  let user = await this.findOne({email: email});
+
+  return user
+}
+
+module.exports = mongoose.model("users", UserSchema);

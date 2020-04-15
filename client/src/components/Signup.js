@@ -18,12 +18,12 @@ class Signup extends React.Component {
     city: '',
     postcode: ''
   }
-  Signup = async (event) => {
+  Signup = async (event) => {    
     event.preventDefault()
 
     console.log(this.state)
 
-    let response = await fetch("http://localhost:3000/Signup", {
+    let response = await fetch("http://localhost:3001/Signup", {
       method: "post",
       body: JSON.stringify(this.state),
       headers: {"Content-Type": "application/json"}
