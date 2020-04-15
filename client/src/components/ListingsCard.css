@@ -1,0 +1,29 @@
+
+.description1 {
+    white-space: nowrap; 
+  width: 60vw; 
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  /* border: 1px solid #000000; */
+  padding-bottom: 7vh;
+
+  
+}
+.cateNupp {
+    display: flex;
+    justify-content: space-around
+
+}
+.nupp {
+    background-color: #32BD6D;
+    height: 6vh;
+    width: 40vw;
+    color: white;
+    font-size: 3vh;
+    border: none;
+}
+
+.cardInfo {
+    background-color: rgb(215, 233, 240);
+    padding-bottom: 4vh;
+}

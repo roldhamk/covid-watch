@@ -1,14 +1,12 @@
 @media only screen and (max-width: 450px) {
 
-    * {
-        margin-left: 0.5vh;
-    }
+   
     .wholePostingsBody h2 {
         color: gray;
         font-size: 3vh;
     }
     .title {
-        width: 90vw;
+        width: 100%;
         height: 7vh;
         border-top: none;
         border-left: none;
@@ -18,8 +16,8 @@
        
     }
     .description {
-        width: 90vw;
-        height: 15vh;
+        width: 100%;
+        height: 29vh;
         border-top: none;
         border-left: none;
         border-right: none;
@@ -28,7 +26,7 @@
        
     }
     .postcode {
-        width: 90vw;
+        width: 100%;
         height: 7vh;
         border-top: none;
         border-left: none;
@@ -39,12 +37,13 @@
 
     .postingsButton {
         background-color: #32BD6D;
-        width: 90vw;
+        width: 100%;
         height: 9vh;
         margin-top: 1vh;
         margin-bottom: 3vh;
         font-size: 4vh;
         color: white;
+        font-weight: 700;
     }
     .radioButtons {
       font-size: 3.5vh;
@@ -53,22 +52,23 @@
     .cat1 {
         display: flex;
         margin-bottom: 0vh;
+        font-size: 3.5vh;
     }
     .radioRing1 {
         margin-left: 4vh;
     }
     .radioRing2 {
-        margin-left: 4.8vh;
+        margin-left: 4.7vh;
     }
     .radioRing3 {
-        margin-left: 9.9vh;
+        margin-left: 9.8vh;
     }
     .radioRing4 {
-        margin-left: 2.36vh;
+        margin-left: 2.3vh;
     }
     input[type='radio'] {
-        height: 3vh;
-        width: 6vw;
+        height: 6vh;
+        width: 8vw;
         vertical-align: middle;
     }
 
@@ -76,6 +76,14 @@
         font-size: 3vh;
         font-weight: bold;
         margin-bottom: -1vh;
+        margin-top: 1vh;
     }
 
+
+    textarea[type='text'] {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 }
+
+}
+

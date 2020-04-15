@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import "./Postings.css"
+import cvlogo from "./images/Logo.png";
 
 export default class Postings extends Component {
   state = {
@@ -9,6 +10,16 @@ export default class Postings extends Component {
     postcode: ""
   }
 
+  createPostings = async(event) => {
+    event.preventDefault();
+    let response = await fetch('http://localhost:3000/Postings', {
+      method: 'post',
+      body: JSON.stringify(this.state),
+      headers: {"Content-Type": "application/json"}
+    });
+    console.log(await response.json());
+
+  }
 
   handleOptionChange = changeEvent => {
     this.setState({
@@ -22,11 +33,7 @@ export default class Postings extends Component {
     
   }
 
-  handleFormSubmit = formSubmitEvent => {
-    formSubmitEvent.preventDefault();
-
-    console.log("You have submitted:", this.state.selectedOption, this.state.title);
-  };
+  
 
   sendButton = () => {
     console.log("Add button is working")
@@ -48,30 +55,27 @@ export default class Postings extends Component {
     }
   }
 
-  // use it when server side has been updated
-  // createPostings = async(event) => {
-  //   event.preventDefault();
-  //   let response = await fetch('http://localhost:3000/Postings', {
-  //     method: 'post',
-  //     body: JSON.stringify(this.state),
-  //     headers: {"Content-Type": "application/json"}
-  //   });
-  //   console.log(await response.json());
+  // handleFormSubmit = formSubmitEvent => {
+  //   formSubmitEvent.preventDefault();
 
-  //     //response = await response.json();
-  //     //if(response.e)
+  //   console.log("You have submitted:", this.state.selectedOption, this.state.title);
+  // };
 
-  // }
+
 
   render() {
 
     return (
+      <>
+      <div className= "header">
+        <img src={cvlogo} alt="covid-watch logo" />
+        </div>
 
        <div className="wholePostingsBody">
       <h1>Post your Request:</h1>
       <h2>Please include as much information as you can</h2>
-      {/* onSubnit={this.createPostings} */}
-      <form onSubmit={this.handleFormSubmit} >
+     
+      <form id="formForm" onSubmit={this.createPostings} >
         <label>
           <div className="titleDiv">
           Title:
@@ -85,7 +89,7 @@ export default class Postings extends Component {
           Description:
           </div>
           <br></br>
-          <input className="description" type="text" name="description" value={this.state.description} onChange={this.handleInputChange} placeholder="Make sure you include all the information, someone needs to deal with your request. For example if you need something picking up from somewhere specific include the location, or if you have any food allergies" />
+          <textarea  form="formForm" className="description" type="text" name="description" value={this.state.description} onChange={this.handleInputChange} placeholder="Make sure you include all the information, someone needs to deal with your request. For example if you need something picking up from somewhere specific include the location, or if you have any food allergies" />
         </label>
         <br></br>
         <div className="radioButtons">
@@ -148,6 +152,7 @@ export default class Postings extends Component {
       </form>
 
     </div>
+    </>
     )
   }
 }
