@@ -16,8 +16,8 @@
 }
 .nupp {
     background-color: #32BD6D;
-    height: 6vh;
-    width: 40vw;
+    height: 9vh;
+    width: 50vw;
     color: white;
     font-size: 3vh;
     border: none;
@@ -26,4 +26,9 @@
 .cardInfo {
     background-color: rgb(215, 233, 240);
     padding-bottom: 4vh;
+    margin-bottom: 2vh;
+    height: 30vh;
+}
+.readmore {
+    height: 1vh;
 }
