@@ -1,6 +1,4 @@
 import React from 'react';
-// import { Link } from 'react-router-dom'
-
 import './Signup.css';
 import cvlogo from "./images/Logo.png";
 
@@ -16,10 +14,11 @@ class Signup extends React.Component {
     addressl1: '',
     addressl2: '',
     city: '',
-    postcode: ''
+    postcode: '',
   }
   Signup = async (event) => {    
     event.preventDefault()
+    this.props.history.push('/Listings');
 
     console.log(this.state)
 
@@ -51,6 +50,7 @@ class Signup extends React.Component {
     }
     else {
       alert('User created')
+      this.setState({redirectToReferrer: true})
     }
   }
 

@@ -12,8 +12,9 @@ export default class Postings extends Component {
 
   Postings = async(event) => {
     event.preventDefault();
+    this.props.history.push('/Postings');
     console.log(this.state)
-    let response = await fetch('http://localhost:3001/Postings', {
+    let response = await fetch('http://localhost:3001/Listings', {
       method: 'post',
       body: JSON.stringify(this.state),
       headers: {"Content-Type": "application/json"}
@@ -82,7 +83,7 @@ export default class Postings extends Component {
           Title:
           </div>
           <br></br>
-          <input className="title" type="text" name="title" value={this.state.title} onChange={this.handleInputChange} placeholder="Give a brief idea of wath you need" />
+          <input className="title" type="text" name="title" value={this.state.title} onChange={this.handleInputChange} placeholder="Give a brief idea of what you need" />
         </label>
         <br></br>
         <label>
