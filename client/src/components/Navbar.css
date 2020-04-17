@@ -4,7 +4,6 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     list-style-type: none;
-    font-size: 3.5vh;
     padding-bottom: 1.5vh;
     padding-top: 1.5vh;
     
@@ -17,4 +16,5 @@
 }
 .navbar ul li a {
     color: white;
+
 }
