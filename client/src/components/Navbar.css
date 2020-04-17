@@ -1,0 +1,20 @@
+
+.navbar ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    list-style-type: none;
+    font-size: 3.5vh;
+    padding-bottom: 1.5vh;
+    padding-top: 1.5vh;
+    
+}
+.navbar {
+    background-color:  #32BD6D;
+}
+.navbar li {
+   
+}
+.navbar ul li a {
+    color: white;
+}

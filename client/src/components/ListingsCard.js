@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import "./ListingsCard.css"
 import DropDown from "./Dropdown"
+import Listings from './Listings'
 
 export default class ListingsCard extends Component {
 
@@ -19,7 +20,9 @@ export default class ListingsCard extends Component {
         return (
 
             <div>
+                <Listings />
                 <DropDown />
+                
                 <div className="cardInfo">
         <h3>Job Name:{this.props.selectedOption}</h3>
         <p>Location/Postcode:{this.props.postcode}</p>

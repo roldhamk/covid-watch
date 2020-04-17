@@ -1,0 +1,73 @@
+#filter {
+    width: 100%;
+    height: 10vh;
+    border-top: solid;
+    border-left: none;
+    border-right: none;
+    border-color: gray;
+    font-size: 3vh;
+    margin-top: 1vh;
+    margin-bottom: 0vh;
+    font-size: 2.5vh;
+   
+}
+
+
+.description1 {
+    white-space: nowrap; 
+  width: 60vw; 
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  /* border: 1px solid #000000; */
+  padding-bottom: 7vh;
+
+  
+}
+.cateNupp {
+    display: flex;
+    justify-content: space-around
+
+}
+.nupp {
+    background-color: #32BD6D;
+    height: 9vh;
+    width: 50vw;
+    color: white;
+    font-size: 3vh;
+    border: none;
+}
+
+.cardInfo {
+    padding-top: 1vh;
+    background-color: rgb(215, 233, 240);
+    
+}
+
+.c3 {
+    margin-bottom: 1vh;
+    
+}
+.c5 {
+    margin-top: 1vh;
+    font-weight: 500;
+}
+
+.searchT {
+    margin-left: 2vh;
+    margin-right: 2vh;
+    color: rgb(138, 136, 136);
+    margin-bottom: 1vh;
+}
+.searchIn {
+    display: flex;
+    
+}
+/* .searchIn ion-icon {
+    padding-top: 2vh;
+    margin-top: 1vh;
+    margin-right: 3vh;
+    font-size: 5vh;
+    border-top: solid;
+    border-color: gray;
+    
+} */
