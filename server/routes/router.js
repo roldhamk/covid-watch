@@ -50,7 +50,16 @@ router.post('/Postings', async (req, res) => {
   res.send({success: 'job successfully created'});
 })
 
+router.get('/Listings', async(req, res) => {
+  let listings = await JobSchema.find({})
+  console.log(listings);
+  
+  
+  res.send(listings);
 
+ // res.send({success: 'Found the job'});
+  
+})
 
 
 
