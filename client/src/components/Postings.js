@@ -12,7 +12,7 @@ export default class Postings extends Component {
 
   Postings = async(event) => {
     event.preventDefault();
-    this.props.history.push('/Postings');
+    
     console.log(this.state)
     let response = await fetch('http://localhost:3001/Listings', {
       method: 'post',
@@ -20,6 +20,7 @@ export default class Postings extends Component {
       headers: {"Content-Type": "application/json"}
     });
     console.log(await response.json());
+    await this.props.history.push('/Listings');
 
   }
 

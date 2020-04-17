@@ -18,8 +18,6 @@ class Signup extends React.Component {
   }
   Signup = async (event) => {    
     event.preventDefault()
-    this.props.history.push('/Listings');
-
     console.log(this.state)
 
     let response = await fetch("http://localhost:3001/Signup", {
@@ -29,6 +27,7 @@ class Signup extends React.Component {
     })
 
     console.log(await response.json())
+    await this.props.history.push('/Listings');
   }
 
   handleInputChange = (event) => {
