@@ -14,7 +14,7 @@ export default class Postings extends Component {
     event.preventDefault();
     
     console.log(this.state)
-    let response = await fetch('http://localhost:3001/Listings', {
+    let response = await fetch('http://localhost:3001/Postings', {
       method: 'post',
       body: JSON.stringify(this.state),
       headers: {"Content-Type": "application/json"}
