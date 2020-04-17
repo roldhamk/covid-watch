@@ -5,12 +5,16 @@
     justify-content: space-evenly;
     list-style-type: none;
     font-size: 3.5vh;
-    margin-right: 4vh;
-    margin-bottom: 0vh;
+    padding-bottom: 1.5vh;
+    padding-top: 1.5vh;
+    
 }
 .navbar {
-    margin-left: 1vh;
+    background-color:  #32BD6D;
 }
 .navbar li {
-    
+   
+}
+.navbar ul li a {
+    color: white;
 }

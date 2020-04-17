@@ -7,7 +7,7 @@
     border-color: gray;
     font-size: 3vh;
     margin-top: 1vh;
-    margin-bottom: 2vh;
+    margin-bottom: 0vh;
     font-size: 2.5vh;
    
 }
@@ -38,8 +38,9 @@
 }
 
 .cardInfo {
+    padding-top: 1vh;
     background-color: rgb(215, 233, 240);
-    padding-bottom: 4vh;
+    
 }
 
 .c3 {
@@ -48,4 +49,25 @@
 }
 .c5 {
     margin-top: 1vh;
+    font-weight: 500;
 }
+
+.searchT {
+    margin-left: 2vh;
+    margin-right: 2vh;
+    color: rgb(138, 136, 136);
+    margin-bottom: 1vh;
+}
+.searchIn {
+    display: flex;
+    
+}
+/* .searchIn ion-icon {
+    padding-top: 2vh;
+    margin-top: 1vh;
+    margin-right: 3vh;
+    font-size: 5vh;
+    border-top: solid;
+    border-color: gray;
+    
+} */

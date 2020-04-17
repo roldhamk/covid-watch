@@ -67,6 +67,8 @@ export class Listings extends Component {
 
     const searchedCategories = filteredData.map( category => {
       console.log(category);
+
+
       return(
       //   <div>
       //     <h1>Job name: {category.selectedOption}</h1>
@@ -74,15 +76,16 @@ export class Listings extends Component {
       //     <h1>Description: {category.description}</h1>
       //   </div>
 
-
-
+        <div>
+    
         <div className="cardInfo">
-        <h3 className="c3">Title:{category.title}</h3>
-        <h4 className="c5">Location/Postcode: {category.postcode}</h4>
+        <h3 className="c3">Title: {category.title}</h3>
+        <h4 className="c5">Postcode: {category.postcode}</h4>
         <p className="description1">Description: {category.description}</p>
         <div className="cateNupp">
-        <h3>Job Name: {category.selectedOption} </h3>
+        <h4>Job Name: {category.selectedOption} </h4>
         <button className="nupp" onClick={this.takeOfferButton}>Take the offer</button>
+        </div>
         </div>
         </div>
 
@@ -96,11 +99,18 @@ export class Listings extends Component {
       
       <div>
            <div className="searchForm">
+             
             <form>
-                <input type="text" id="filter" placeholder="Search for shopping, medicine, meals or just a chat"  onChange={this.handleInputChange}/>
+            <div className="searchIn">
+                <input type="text" id="filter" placeholder="Search for..."  onChange={this.handleInputChange} />
+                {/* <ion-icon name="search-outline"></ion-icon> */}
+                </div>
             </form>
+            
+           <p className="searchT">*You can search: shopping, medicine, meals or just a chat</p>
             {searchedCategories}
         </div>
+        
       </div>
     )
   }
